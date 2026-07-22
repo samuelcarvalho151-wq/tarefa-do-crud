@@ -420,3 +420,144 @@ mediaGeralDaTurma();
 listarAprovados();
 
 //////////////////////////////////////Os Menus////////////////////////////////////////////////////
+
+function submenuCadastro() {
+    let opcao;
+
+    do {
+        console.log("\n=== MENU CADASTRO ===");
+        console.log("1 - Cadastrar aluno");
+        console.log("2 - Listar alunos");
+        console.log("3 - Remover aluno");
+        console.log("0 - Voltar");
+
+        opcao = Number(prompt("Escolha uma opção: "));
+
+        switch (opcao) {
+            case 1:
+                cadastrarAluno();
+                break;
+
+            case 2:
+                listarAlunos();
+                break;
+
+            case 3:
+                removerAluno();
+                break;
+
+            case 0:
+                break;
+
+            default:
+                console.log("Opção inválida!");
+        }
+
+    } while (opcao !== 0);
+}
+
+
+function submenuNotas() {
+    let opcao;
+
+    do {
+        console.log("\n=== MENU NOTAS ===");
+        console.log("1 - Lançar nota");
+        console.log("2 - Ver boletim");
+        console.log("0 - Voltar");
+
+        opcao = Number(prompt("Escolha uma opção: "));
+
+        switch (opcao) {
+            case 1:
+                lancarNota();
+                break;
+
+            case 2:
+                verBoletim();
+                break;
+
+            case 0:
+                break;
+
+            default:
+                console.log("Opção inválida!");
+        }
+
+    } while (opcao !== 0);
+}
+
+
+function submenuRelatorios() {
+    let opcao;
+
+    do {
+        console.log("\n=== MENU RELATÓRIOS ===");
+        console.log("1 - Total de alunos");
+        console.log("2 - Média geral da turma");
+        console.log("3 - Listar aprovados");
+        console.log("0 - Voltar");
+
+        opcao = Number(prompt("Escolha uma opção: "));
+
+        switch (opcao) {
+            case 1:
+                totalDeAlunos();
+                break;
+
+            case 2:
+                mediaGeralDaTurma();
+                break;
+
+            case 3:
+                listarAprovados();
+                break;
+
+            case 0:
+                break;
+
+            default:
+                console.log("Opção inválida!");
+        }
+
+    } while (opcao !== 0);
+}
+
+
+function menuPrincipal() {
+    let opcao;
+
+    do {
+        console.log("\n===== SISTEMA ESCOLAR =====");
+        console.log("1 - Cadastro");
+        console.log("2 - Notas");
+        console.log("3 - Relatórios");
+        console.log("0 - Sair");
+
+        opcao = Number(prompt("Escolha uma opção: "));
+
+        switch (opcao) {
+            case 1:
+                submenuCadastro();
+                break;
+
+            case 2:
+                submenuNotas();
+                break;
+
+            case 3:
+                submenuRelatorios();
+                break;
+
+            case 0:
+                console.log("Sistema encerrado.");
+                break;
+
+            default:
+                console.log("Opção inválida!");
+        }
+
+    } while (opcao !== 0);
+}
+
+menuPrincipal();
